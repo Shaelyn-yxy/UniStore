@@ -1,10 +1,10 @@
 # Uni-Store
 
 Member(Unimelb):
-Xinyi YUAN
-Chun-Wen Cheng
-Chenwei Niu 1017772
-Tianze Liu 987969
+· Xinyi YUAN
+· Chun-Wen Cheng
+· Chenwei Niu
+· Tianze Liu
 
 
 Description: Website entry page URL
