@@ -1,5 +1,12 @@
 # Uni-Store
 
+Member(Unimelb):
+Xinyi YUAN
+Chun-Wen Cheng
+Chenwei Niu 1017772
+Tianze Liu 987969
+
+
 Description: Website entry page URL
 + URL Structure:
 https://uni-store.herokuapp.com
