@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<!-- This page demonstrates all on sale books the current user has uploaded,
+     and the user could delete the book once he finds the customer. -->
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/stylesheets/booksSection.css">
+</head>
+<body>
+<%- include users.ejs %>
+<div style="position:absolute;top:120px;left:240px;">
+    <h3>My Books On Sales</h3>
+    <div class="grid-container">
+        <% list.map(function(item,i){%>
+            <div class = "bookBox">
+                <img class = "image" src=<%= item.image %>>
+                <p class = 'bookName'><%= item.bookName %></p>
+                <p class = 'authorName'><%= item.authorName %></p>
+                <p class = 'categoryName'><%= item.category %></p>
+
+                <div class="bottom">
+                    <div class="left">$<%= item.price %></div>
+                    <div class="right">
+
+                        <button type="button" class = "button more">
+                            <a href="/users/deleteBooks?id=<%= item._id %>">
+                                <script language="JavaScript">
+                                    function delete_confirm(e){
+                                        if (event.srcElement.outerText == "Delete") {
+                                            event.returnValue = confirm("Are you sure to delete this book？");
+                                        }
+                                    }
+                                    document.onclick = delete_confirm;
+                                </script>
+                                Delete
+                            </a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+</div>
+
+</body>
+</html>

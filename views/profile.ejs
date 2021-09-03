@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<body>
+<%- include users.ejs %>
+<div class="info">
+    <div class="oneItem">
+        <div class="label">Username</div>
+        <p class = 'content'><%= user %></p>
+    </div>
+    <div class="oneItem">
+        <div class="label">First name</div>
+        <p class = 'content'><%= userObject.firstName %></p>
+    </div>
+    <div class="oneItem">
+        <div class="label">Last name</div>
+        <p class = 'content'><%= userObject.lastName %></p>
+    </div>
+    <div class="oneItem">
+        <div class="label">Email</div>
+        <p class = 'content'><%= userObject.email %></p>
+    </div>
+</div>
+
+</body>
+</html>

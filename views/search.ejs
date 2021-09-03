@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<!-- This page demonstrates the search results -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Search</title>
+    <%- include navBar.ejs %>
+    <link rel='stylesheet' href='/stylesheets/booksSection.css'/>
+</head>
+<body>
+<div>
+    <% if(errors.length > 0) { %>
+        <script>
+            question = confirm("Sorry no books found, back to home page ?");
+
+            window.location.href = "/home/searchPage";
+
+        </script>
+    <% } %>
+<div class="msg">Find <%= list.length %> results for you.</div>
+<div class="grid-container">
+    <% list.map(function(item,i){%>
+    <div class = "bookBox">
+        <img class = "image" src=<%= item.image %>>
+        <p class = 'bookName'><%= item.bookName %></p>
+        <p class = 'authorName'><%= item.authorName %></p>
+        <p class = 'categoryName'><%= item.category %></p>
+
+        <div class="bottom">
+            <div class="left">$<%= item.price %></div>
+            <div class="right">
+                <button type="button">
+                    <a href="/users/addFav?id=<%= item._id %>">
+                        <img src = "../image/heart.png" width="20">
+                    </a>
+                </button>
+                <button type="button" class = "button more">
+                    <a href="/home/book?id=<%= item._id %>">
+                        More details
+                    </a>
+                </button></div>
+        </div>
+    </div>
+    <% }) %>
+
+
+
+</div>
+<!--footer-->
+<%- include footer.ejs %>
+</div>
+</body>
+</html>

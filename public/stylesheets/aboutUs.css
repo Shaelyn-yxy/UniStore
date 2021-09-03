@@ -1,0 +1,29 @@
+.aboutUs h2{
+    color: black;
+    font-size: 42px;
+    margin-top: 50px;
+    margin-left: 500px;
+    font-family: 'Fredericka the Great', sans-serif;
+
+}
+.textContainer {
+    max-width: 960px;
+    background: rgba(255,255,255,0.8);
+    font-size: 20px;
+    padding: 25px;
+    margin: 30px auto;
+    border: #e27c56 dashed;
+    margin-bottom: 50px;
+}
+.moving{
+    background: url('../image/aboutMe1.jpg') no-repeat fixed center;
+    background-size: cover;
+    background-attachment: fixed;
+    height:500px;
+}
+.moving2{
+    background: url('../image/magnifying glass.jpg') no-repeat fixed center;
+    background-size: cover;
+    background-attachment: fixed;
+    height:500px;
+}

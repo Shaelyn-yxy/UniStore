@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <%- include users.ejs %>
+    <!--    <link rel='stylesheet' href='/stylesheets/users.css'/>-->
+</head>
+<body>
+<section class="box">
+    <h3>Enter your new profile information</h3><br>
+    <% if(typeof errors != 'undefined'){ %> <% errors.forEach(function(error) { %>
+        <div class="alert" role="alert">
+            <%= error.msg %>
+
+        </div>
+    <% }); %> <% } %>
+    <form action = "/users/edit" method="post">
+        <div class = "text"> First Name </div>
+        <input required="" id="firstName" type="text" name="firstName" placeholder="First Name" />
+        <div class = "text"> Last Name </div>
+        <input required="" id="lastName" type="text" name="lastName" placeholder="Last Name" />
+        <div class = "password"> New Password </div>
+        <input required="" id="password" type="password" name="password" placeholder=" at least 6 characters" />
+
+        <br>
+        <input type="submit" value="Confirm Update" class = "submitButton">
+
+    </form>
+</section>
+</body>
+
+</html>

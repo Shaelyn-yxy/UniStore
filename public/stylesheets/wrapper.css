@@ -1,0 +1,69 @@
+.wrapper{
+    min-height: 100%;
+}
+.wrapper a
+{
+    text-decoration: none;
+    color: #555555;
+}
+.wrapper a:hover {
+    text-decoration: none;
+    color: #e27c56;
+}
+
+.slider .title{
+    text-align: center;
+    margin: 30px auto ;
+}
+.slider h1{
+    font-family: 'Fredericka the Great', sans-serif;
+}
+.slider .prev{
+    position: absolute;
+    top:120%;
+    left:5%;
+    font-size: 2em;
+    color: #ffa250;
+    cursor: pointer;
+
+}
+
+.slider .next{
+    position: absolute;
+    top:120%;
+    right:5%;
+    font-size: 2em;
+    color: #ffa250;
+    cursor: pointer;
+}
+.slider .moving
+{
+    width: 80%;
+    height: 400px;
+    margin:0px auto;
+    border: darkorange dashed;
+    padding: 20px 0 20px 0;
+    overflow: hidden;
+}
+.slider .moving .item{
+    width: 200px;
+    height:350px;
+    margin:0 15px;
+    display: inline-block;
+    border-radius: 5px;
+    box-shadow: 1rem 1rem 1rem -1rem #a0a0a033;
+}
+.slider .moving .item .item-img{
+    width: 100%;
+    height: 280px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.slider .moving .item .item-info {
+    margin: 5px;
+    height: 70px;
+    font-size: 16px;
+    text-decoration: none;
+    text-align: center;
+    padding: 0 5px;
+}

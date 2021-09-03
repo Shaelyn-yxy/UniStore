@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<!-- This page demonstrates all books the user has added into his/her favorite book list.
+     The user could see the seller's E-mail by contact the seller button.
+     The user could remove the selected book from the list. -->
+
+<html>
+<head>
+    <link rel="stylesheet" href="/stylesheets/booksSection.css">
+</head>
+<body>
+<%- include users.ejs %>
+<div style="position:absolute;top:120px;left:240px;">
+    <h3>Favourite Book</h3>
+    <div class="grid-container">
+        <% list.map(function(item,i){%>
+            <div class = "bookBox">
+                <img class = "image" src=<%= item.image %>>
+                <a href="/home/book?id=<%= item._id %>">
+                    <p class = 'bookName'><%= item.bookName %></p>
+                </a>
+                <p class = 'authorName'><%= item.authorName %></p>
+                <p class = 'categoryName'><%= item.category %></p>
+                <div class="bottom">
+                    <div class="left">$<%= item.price %></div>
+                    <div class="right">
+                        <button type="button" class = "button more">
+                            <a href="/users/deleteFav?id=<%= item._id %>">
+                                <script language="JavaScript">
+                                    function delete_confirm(e){
+                                        if (event.srcElement.outerText == "Remove books") {
+                                            event.returnValue = confirm("Are you sure to remove this book from your" +
+                                                "favourite book list？");
+                                        }
+                                    }
+                                    document.onclick = delete_confirm;
+                                </script>
+                                Remove books
+                            </a>
+                        </button></div>
+                </div>
+
+
+            </div>
+        <% }) %>
+
+
+    </div>
+</div>
+
+
+</body>
+</html>

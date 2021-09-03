@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<!-- This is the user page,
+ There are three buttons on the left side of this page, which are upload books, check the list of favorite books
+ and show the uploaded books. All pages related to the user's functionality include these three buttons. -->
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= user %>'s page</title>
+    <%- include navBar.ejs %>
+    <link rel='stylesheet' href='/stylesheets/users.css'/>
+</head>
+
+<body>
+<div class = "button1">
+    <h1>Hi <%= user %>!</h1>
+    <div id="b1"><a href="/users/insert?username=<%= user %>">Upload book</a></div>
+    <div id="b1"><a href="/users/booksOnSale?seller=<%= user %>">My upload</a></div>
+    <div id="b1"><a href="/users/favorite?username=<%= user %>">My favorite</a></div>
+    <div id="b1"><a href="/users/edit">Edit profile</a></div>
+</div>
+</body>
+
+</html>

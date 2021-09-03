@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<!-- This page is for users to upload the book they want to sell
+     The user should fill out the required information for the book,
+     otherwise he would upload unsuccessfully. -->
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<style>
+    .category{
+        margin-bottom: 20px;
+        width: 100%;
+        height: 40px;
+        border-color: #ddd;
+        border-radius: 4px;
+    }
+</style>
+
+<body>
+<div class="wrap">
+    <%- include users.ejs %>
+    <section class="box">
+        <h3>Enter your book information</h3>
+        <form action = "/users/insertBook" method="post">
+            <div class = "text"> Book Name </div>
+            <input required="" id="bookName" type="text" name="bookName" placeholder="book name" />
+            <div class = "text"> Author Name </div>
+            <input required="" id="authorName" type="text" name="authorName" placeholder="author name" />
+            <div class = "text"> Price </div>
+            <input required="" id="price" type="number" min="0"  name="price"/>
+
+            <div class = "text"> Description </div>
+            <input required="" id="description" type="text" name="description" placeholder="Write some details about this book"/>
+
+            <!-- <label for="category" class = "text">Category: </label> -->
+            <div class = "text"> Category </div>
+            <select name ="category" class = "category">
+                <option value="Bachelor of Arts">Bachelor of Arts</option>
+                <option value="Bachelor of Agriculture">Bachelor of Agriculture</option>
+                <option value="Bachelor of BioMedicine">Bachelor of BioMedicine</option>
+                <option value="Bachelor of Commerce">Bachelor of Commerce</option>
+                <option value="Bachelor of Design">Bachelor of Design</option>
+                <option value="Bachelor of Music">Bachelor of Music</option>
+                <option value="Bachelor of Science">Bachelor of Science</option>
+            </select>
+            <div class = "text"> Image URL: </div>
+            <input required="" id="image" type="text" name="image" placeholder="image URL"/>
+
+            <br>
+            <input type="submit" value="Insert" class = "submitButton">
+
+        </form>
+    </section>
+</div>
+</body>
+
+</html>

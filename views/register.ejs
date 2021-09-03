@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<!-- This is the register page,
+     users need to enter all required information to register an account -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register</title>
+    <link rel='stylesheet' href='/stylesheets/sign.css'/>
+</head>
+<body>
+<div class = 'sign'>
+    <div class="text">
+        <h1>Sign up</h1>
+        <p> Have Account? <a href="/users/login">Sign in</a></p>
+    </div>
+    <div class="box-form">
+        <% include ./partials/messages.ejs %>
+        <form class='form' action="/users/register" method="post">
+            <input required=""  type="text" name="firstName" placeholder="First name" />
+
+            <input required=""  type="text" name="lastName" placeholder="Last name" />
+
+            <input required=""  type="email" name="email" placeholder="Email address" />
+
+            <input required=""  type="text" name="userName" placeholder="Username" />
+
+            <input required=""  type="password" name="password" placeholder=" Password, at least 6 characters" />
+
+            <input type="submit" value="Register" class="submit">
+        </form>
+    </div>
+</div>
+<!--&lt;!&ndash; 'box' refer to css&ndash;&gt;-->
+<!--<section class="box">-->
+<!--    <h1>Register</h1>-->
+<!--    <% include ./partials/messages.ejs %>-->
+<!--    <form action="/users/register" method="post">-->
+<!--        <label for="firstName">First Name:</label>-->
+<!--        <input required="" id="firstName" type="text" name="firstName" placeholder="your first name" />-->
+
+<!--        <label for="lastName">Last Name:</label>-->
+<!--        <input required="" id="lastName" type="text" name="lastName" placeholder="your last name" />-->
+
+<!--        <label for="email">Email:</label>-->
+<!--        <input required="" id="email" type="email" name="email" placeholder="your email address" />-->
+
+<!--        <label for="userName">User Name:</label>-->
+<!--        <input required="" id="userName" type="text" name="userName" placeholder="your username" />-->
+
+<!--        <label for="password">Password:</label>-->
+<!--        <input required="" id="password" type="password" name="password" placeholder=" at least 6 characters" />-->
+
+<!--        <input type="submit" value="Register">-->
+
+<!--    </form>-->
+<!--</section>-->
+</body>
+</html>

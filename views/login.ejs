@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<!-- This is the login page,
+     users need to enter the correct email and password to log in to the website -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Sahitya:wght@700&display=swap" rel="stylesheet">
+    <title>Login</title>
+    <link rel='stylesheet' href='/stylesheets/sign.css'/>
+</head>
+<body>
+<div class = 'sign'>
+    <div class="text">
+        <h1>Login</h1>
+        <p>No Account? <a href="/users/register">Sign up</a></p>
+    </div>
+    <div class="box-form">
+        <% include ./partials/messages.ejs %>
+    <form class='form' action="/users/login" method="post">
+            <input type="text" name="userName" required="" placeholder="Username">
+            <input type="password" name="password" required="" placeholder="Password">
+            <input type="submit" value="Login" class="submit">
+    </form>
+    </div>
+</div>
+</body>
+</html>

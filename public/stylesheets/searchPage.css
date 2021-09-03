@@ -1,0 +1,43 @@
+.search{
+    height:75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../image/login.jpeg");
+    background-size: auto;
+}
+.searchBox{
+    margin-bottom: 20px;
+}
+.searchBox h2{
+    padding:0;
+    color: white;
+    margin-bottom: 70px;
+    text-align: center;
+    font-size:36px;
+    font-family: 'Fredericka the Great', sans-serif;
+    letter-spacing: 1px;
+
+}
+.searchBox input{
+    width:500px;
+    height: 45px;
+    padding: 10px;
+    border:none;
+    border-radius: 25px;
+    font-size: 16px;
+    outline:none;
+}
+.searchBox .searchButton{
+    height: 45px;
+    width:100px;
+    background-color: #f2d547;
+    color: white;
+    border:none;
+    border-radius: 25px;
+    opacity: 0.8;
+}
+.searchBox .searchButton:hover{
+    background-color: #f2d547;
+    opacity: 1;
+}
