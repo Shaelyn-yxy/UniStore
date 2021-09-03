@@ -1,10 +1,11 @@
 # Uni-Store
 
 Member(Unimelb):
-· Xinyi YUAN
-· Chun-Wen Cheng
-· Chenwei Niu
-· Tianze Liu
+
+* Xinyi YUAN
+* Chun-Wen Cheng
+* Chenwei Niu
+* Tianze Liu
 
 
 Description: Website entry page URL
